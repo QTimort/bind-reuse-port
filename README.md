@@ -32,3 +32,17 @@ Wait some seconds...
 - (in another terminal) echo "Hello world" > /dev/udp/127.0.0.1/5353
 
 If you see the message "received: " after using the command above then it mean that the solution is working.
+
+# Possible improvement
+I tried to call setsockopt C function from C# but the function returned -1 which mean that an error occured. That is why I made a library that call those function from a "C context" which work as opposed to direct C call from C# for unknown reason(s).
+
+I was able to close a socket using the C function close.
+
+You can try to call C function by declaring them like this:
+  [DllImport("libc.so.6")]
+  private static extern int setsockopt(int socket, int level, int option_name, void *ptr, int optlen);
+  
+   [DllImport("libc.so.6")]
+  private static extern int close(int fd);
+  
+  ...
