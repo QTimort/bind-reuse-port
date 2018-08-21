@@ -7,6 +7,7 @@ The solution provided is to call Linux native functions through a C library to s
 It is confirmed working with:
 - dotnetcore 2.1 on Linux Ubuntu 18.04 (Bionic)
 - mono 2.1.4 on Linux Ubuntu 16.04
+- Windows (Obviously...)
 
 # Instruction
 First compile the C library
