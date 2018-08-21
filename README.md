@@ -22,6 +22,6 @@ Then compile and run the C# example either with your IDE or with the command lin
 
 Wait some seconds...
 
-- echo "Hello world" > /dev/udp/127.0.0.1/5353
+- (in another terminal) echo "Hello world" > /dev/udp/127.0.0.1/5353
 
-If you see the message "received: " appear after using the command above then it mean that the solution is working.
+If you see the message "received: " after using the command above then it mean that the solution is working.
