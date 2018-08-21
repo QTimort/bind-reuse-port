@@ -40,7 +40,7 @@ I tried to call setsockopt C function from C# but the function returned -1 which
 
 I was able to close a socket using the C function close.
 
-You can try to call C function by declaring them like this:
+You can try to call C function from C# on Linux by declaring them like this:
 ```
 [DllImport("libc.so.6")]
 private static extern int setsockopt(int socket, int level, int option_name, void *ptr, int optlen);
