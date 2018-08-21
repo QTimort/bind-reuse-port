@@ -9,7 +9,7 @@ It has been tested with dotnetcore 2.1 on Linux Ubuntun 18.04 (Bionic)
 # Instruction
 First compile the C library
 - cd c_lib
-- Cmake CMakeLists.txt
+- cmake CMakeLists.txt
 - make
 - cp libbindreuseport.so ../example
 
