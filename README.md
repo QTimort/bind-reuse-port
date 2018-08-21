@@ -12,8 +12,14 @@ It is confirmed working with:
 # Instruction
 First compile the C library
 - cd c_lib
-- cmake CMakeLists.txt
-- make
+
+  - gcc -c -fpic bindReusePort.c && gcc -shared -o libbindreuseport.so bindReusePort.o && rm bindReusePort.o
+  
+  OR
+  
+  - cmake CMakeLists.txt
+  - make
+  
 - cp libbindreuseport.so ../example
 
 Then compile and run the C# example either with your IDE or with the command line like below
