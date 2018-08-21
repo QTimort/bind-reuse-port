@@ -35,15 +35,16 @@ If you see the message "received: " after using the command above then it mean t
 
 # Possible improvement
 - Direct call to C function instead of having to go through a hand made library.
-    I tried to call setsockopt C function from C# but the function returned -1 which mean that an error occured. That is why I made a       library that call those function from a "C context" which work as opposed to direct C call from C# for unknown reason(s).
 
-    I was able to close a socket using the C function close.
+I tried to call setsockopt C function from C# but the function returned -1 which mean that an error occured. That is why I made a       library that call those function from a "C context" which work as opposed to direct C call from C# for unknown reason(s).
 
-    You can try to call C function by declaring them like this:
-      [DllImport("libc.so.6")]
-      private static extern int setsockopt(int socket, int level, int option_name, void *ptr, int optlen);
+I was able to close a socket using the C function close.
 
-       [DllImport("libc.so.6")]
-      private static extern int close(int fd);
+You can try to call C function by declaring them like this:
+[DllImport("libc.so.6")]
+private static extern int setsockopt(int socket, int level, int option_name, void *ptr, int optlen);
 
-      ...
+ [DllImport("libc.so.6")]
+private static extern int close(int fd);
+
+...
